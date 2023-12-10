@@ -4,7 +4,7 @@ function Nav() {
             <ul>
                 <li><a href="#">Home</a></li>
                 <li><a href="#">about</a></li>
-                <li><a href="#">Men</a></li>
+                <li><a href="#">Menu</a></li>
                 <li><a href="#">Reservations</a></li>
                 <li><a href="#">Order Online</a></li>
                 <li><a href="#">Login</a></li>
