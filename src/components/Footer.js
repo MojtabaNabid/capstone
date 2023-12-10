@@ -24,6 +24,7 @@ function Footer() {
             <section>
                 <h4>Social Media Links</h4>
                 <a>Instagram</a>
+                <a>Facebook</a>
                 <a>Twitter</a>
                 <a>Linkedin</a>
             </section>
