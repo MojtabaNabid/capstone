@@ -1,7 +1,7 @@
 function Home() {
     return (
-        <main>
-            <section>
+        <main className="main">
+            <section className="banner">
                 <section>
                     <h1>Little Lemon</h1>
                     <p>Little Lemon</p>
