@@ -1,5 +1,5 @@
 import Nav from './Nav.js'
-import Logo1 from '../images/Logo1.jpg'
+import Logo1 from '../assets/images/Logo1.jpg'
 
 function Header() {
     return (

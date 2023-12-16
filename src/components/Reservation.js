@@ -1,7 +1,7 @@
 function Reservations() {
     return (
-        <main>
-            <article>
+        <main className="main-reservation">
+            <article className="reservation-banner">
                 <section>
                     <h1>Reserve a Table</h1>
                     <p>at little lemon Chicago</p>

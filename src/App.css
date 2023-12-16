@@ -1,3 +1,13 @@
+@font-face {
+  font-family: Karla-medium;
+  src: url(../src/assets/fonts/Karla-Medium.ttf);
+}
+
+@font-face {
+  font-family: Markazi;
+  src: url(../src/assets/fonts/MarkaziText-Regular.ttf);
+}
+
 .App {
   text-align: center;
   width: 90vw;
@@ -7,7 +17,7 @@
 .App-header {
   background-color: #fff;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
   align-items: center;
   /* width: 90vw; */
   margin: 20px auto;
@@ -40,4 +50,120 @@
 
 .main {
 
+}
+
+.home-banner {
+  display: grid;
+  grid-template-rows: 400px;
+  grid-template-columns: 400px 400px;
+  justify-content: center;
+  align-items: center;
+  background-color: #495E57;
+}
+
+.homebanner-text {
+  text-align: left;
+  width: 375px;
+}
+
+.home-banner h1 {
+  font-family: Markazi;
+  font-size: 3.5em;
+  font-weight: 700;
+  margin: 0;
+}
+
+.homebanner-text p:first-of-type {
+  font-family: Markazi;
+  font-size: 2em;
+  font-weight: 550;
+  margin: 5px;
+}
+
+.homebanner-desc {
+  margin: 1rem 0;
+  font-family: Karla-medium;
+}
+
+.yello-btn {
+  width: 10rem;
+  height: 3rem;
+  background-color: #F4CE14;
+  font-weight: bold;
+  border-radius: 5px;
+}
+
+.homebanner-img {
+  width: 375px;
+  height: 325px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.weekspecial {
+  margin: 0;
+}
+
+.weekspecial-title {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+h2 {
+  font-family: Markazi;
+  font-size: 4rem;
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  text-align: left;
+}
+.card1, .card2, .card3 {
+  background-color: #EDEFEE;
+  margin: 3em 1em;
+  width: 265px;
+  height: 450px;
+  border-top-left-radius: 24px;
+  border-top-right-radius: 24px;
+}
+
+.card1 img, .card2 img, .card3 img {
+  width: inherit;
+  border-top-left-radius: 24px;
+  border-top-right-radius: 24px;
+  max-height: 175px
+  /* border: 1px solid black; */
+}
+
+.card-desc {
+  padding: 0 1em;
+}
+
+.card-title-price {
+  display: flex;
+  justify-content: space-between;
+}
+.card-title-price p {
+  color: #EE9972;
+}
+
+.card-recipe {
+  font-size: 1em;
+  /* padding: 5px; */
+}
+
+.card-calltoaction {
+  display: flex;
+}
+
+.card-calltoaction a {
+  font-weight: bold;
+}
+
+.card-calltoaction img{
+  margin-left: 20px;
 }
