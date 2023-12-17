@@ -3,6 +3,14 @@ import greeksalad from "../assets/images/greek salad.jpg"
 import motorcycle from "../assets/images/motorcycle-svgrepo-com.svg"
 import bruchetta from "../assets/images/bruchetta.jpg"
 import lemondessert from "../assets/images/lemon dessert.jpg"
+import certificate from "../assets/images/certificate-testimonials.svg"
+import star5 from "../assets/images/5-star.png"
+import star4 from "../assets/images/4-star.png"
+import person1 from "../assets/images/person1.png"
+import person2 from "../assets/images/person2.png"
+import person3 from "../assets/images/person3.png"
+import person4 from "../assets/images/person4.png"
+
 
 function Home() {
     return (
@@ -68,11 +76,52 @@ function Home() {
                     </section>
                 </article>
             </section>
-            <section>
+            <section className="testimonials">
                 <h2>Testimonials</h2>
+                <section className="testimonials-items">
+                    <section className="item">
+                        <img src={star5} />
+                        <div className="commentor">
+                            <img src={person1} />
+                            <p>Julian</p>
+                        </div>
+                        <p>My wife and I, vacationing in SD from Chicago, had lunch Fri 17th at TFG and we were both absolutely pleased with everything at your place.</p>
+                    </section>
+                    <section className="item">
+                    <img src={star4} />
+                        <div className="commentor">
+                            <img src={person2} />
+                            <p>Martin</p>
+                        </div>
+                        <p>We were at The Little Lemon a few weeks ago with some clients from Texas . I am finally getting back to tell you that we had a wonderful evening! The food, the service, the host, EVERYTHING was perfect!</p>
+                    </section>
+                    <section className="item">
+                    <img src={star5} />
+                        <div className="commentor">
+                            <img src={person3} />
+                            <p>Jodi</p>
+                        </div>
+                        <p>Thank you for dinner last night. It was amazing!! I have to say it’s the best meal I have had in quite some time. You will definitely be seeing more of me eating at your establishment.</p></section>
+                    <section className="item">
+                    <img src={star4} />
+                        <div className="commentor">
+                            <img src={person4} />
+                            <p>Kathy</p>
+                        </div>
+                        <p>WOW!!! What an outstanding dinner you prepared at the Little Lemon on Friday evening!!! It was an honor for me to be invited and experience firsthand your incredible culinary gift!</p></section>
+                </section>
             </section>
-            <section>
-                <h2>Little Lemon</h2>
+            <section className="about">
+                <section className="about-desc">
+                    <h2>Little Lemon</h2>
+                    <p>Chicago</p>
+                    <p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.
+                                    <br/>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. </p>
+                </section>
+                <section>
+                    <img src={homebanner} className="about-img" />
+                    <img src={homebanner} className="about-img" />
+                </section>
             </section>
         </main>
     )

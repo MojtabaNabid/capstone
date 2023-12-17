@@ -14,6 +14,7 @@
   margin: auto;
 }
 
+/* Header */
 .App-header {
   background-color: #fff;
   display: flex;
@@ -52,6 +53,8 @@
 
 }
 
+
+/* Home Banner */
 .home-banner {
   display: grid;
   grid-template-rows: 400px;
@@ -100,6 +103,7 @@
   border-radius: 5px;
 }
 
+/* Week Specials */
 .weekspecial {
   margin: 0;
 }
@@ -121,10 +125,11 @@ h2 {
   flex-direction: row;
   justify-content: center;
   text-align: left;
+  padding-bottom: 3rem;
 }
 .card1, .card2, .card3 {
   background-color: #EDEFEE;
-  margin: 3em 1em;
+  margin: 1em 1em;
   width: 265px;
   height: 450px;
   border-top-left-radius: 24px;
@@ -166,4 +171,81 @@ h2 {
 
 .card-calltoaction img{
   margin-left: 20px;
+}
+
+/* Testimonials */
+.testimonials {
+  background-color: #D9D9D9;
+  padding-top: 3rem;
+  padding-bottom: 8rem;
+}
+
+.testimonials-items {
+  display: grid;
+  grid-template-columns: repeat(4, 250px);
+  column-gap: 20px;
+  grid-template-rows: 340px;
+  justify-content: center;
+  align-content: center;
+
+}
+
+.item {
+  background-color: #fff;
+  text-align: left;
+  padding: 0 1rem;
+  border-radius: 5px;
+}
+
+.item > img {
+  height: 20px;
+  margin: 20px 0 10px 0;
+}
+
+
+.commentor {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.commentor img {
+  height: 70px;
+  margin-right: 10px;
+  border-radius: 50%;
+}
+
+.item p:last-of-type {
+  margin-top: 30px;
+}
+
+/* About */
+.about {
+  display: grid;
+  grid-template-rows: 400px;
+  grid-template-columns: 300px 550px;
+  row-gap: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-desc {
+  width: 375px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: left;
+}
+
+.about-desc h2 {
+  margin: 0;
+}
+
+.about img{
+  width: 272px;
+  /* border-radius: 10px; */
+}
+
+.about img:last-of-type{
+  z-index: 1;
 }
