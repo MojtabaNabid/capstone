@@ -298,3 +298,13 @@ footer h4 {
 .footer_contact {
   text-align: left;
 }
+
+/* ************************Reservation page*********************** */
+.reservation-banner {
+  display: flex;
+  flex-
+}
+
+.reservation-banner img {
+  width: 200px;
+}

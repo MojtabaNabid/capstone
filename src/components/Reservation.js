@@ -1,3 +1,4 @@
+import reserve_table_banner from "../assets/images/reservetable.jpg"
 function Reservations() {
     return (
         <main className="main-reservation">
@@ -8,6 +9,7 @@ function Reservations() {
                     <p>Make sure you create an account and enter all your information accurately before completing your reservation</p>
                     <button>Create an account</button>
                 </section>
+                <img src={reserve_table_banner} alt="a dish with one fish"/>
                 <section>
                     <img src="" />
                 </section>
