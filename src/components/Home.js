@@ -10,6 +10,10 @@ import person1 from "../assets/images/person1.png"
 import person2 from "../assets/images/person2.png"
 import person3 from "../assets/images/person3.png"
 import person4 from "../assets/images/person4.png"
+import restaurant from "../assets/images/restaurant.jpg"
+import restaurant_chef from "../assets/images/restaurantchef.jpg"
+
+
 
 
 function Home() {
@@ -70,7 +74,7 @@ function Home() {
                             <p className="card-recipe">This comes straight from grandma’s recipe book, every last ingredient has been sourced and is as authentic as can be imagined. </p>
                             <section className="card-calltoaction">
                                 <a>Order a Delivery</a>
-                                <a><img src={motorcycle} style={{ width: "20px" }} /></a>
+                                <a><img src={motorcycle} style={{ width: "20px" }} alt="motorcycle icon"/></a>
                             </section>
                         </section>
                     </section>
@@ -80,32 +84,32 @@ function Home() {
                 <h2>Testimonials</h2>
                 <section className="testimonials-items">
                     <section className="item">
-                        <img src={star5} />
+                        <img src={star5} alt="rated 5 stars"/>
                         <div className="commentor">
-                            <img src={person1} />
+                            <img src={person1} alt="commentor number 1"/>
                             <p>Julian</p>
                         </div>
                         <p>My wife and I, vacationing in SD from Chicago, had lunch Fri 17th at TFG and we were both absolutely pleased with everything at your place.</p>
                     </section>
                     <section className="item">
-                    <img src={star4} />
+                    <img src={star4} alt="rated 4 stars"/>
                         <div className="commentor">
-                            <img src={person2} />
+                            <img src={person2} alt="commentor number 2"/>
                             <p>Martin</p>
                         </div>
                         <p>We were at The Little Lemon a few weeks ago with some clients from Texas . I am finally getting back to tell you that we had a wonderful evening! The food, the service, the host, EVERYTHING was perfect!</p>
                     </section>
                     <section className="item">
-                    <img src={star5} />
+                    <img src={star5} alt="rated 5 stars"/>
                         <div className="commentor">
-                            <img src={person3} />
+                            <img src={person3} alt="commentor number 3"/>
                             <p>Jodi</p>
                         </div>
                         <p>Thank you for dinner last night. It was amazing!! I have to say it’s the best meal I have had in quite some time. You will definitely be seeing more of me eating at your establishment.</p></section>
                     <section className="item">
-                    <img src={star4} />
+                    <img src={star4} alt="rated 4 stars"/>
                         <div className="commentor">
-                            <img src={person4} />
+                            <img src={person4} alt="commentorNumber4"/>
                             <p>Kathy</p>
                         </div>
                         <p>WOW!!! What an outstanding dinner you prepared at the Little Lemon on Friday evening!!! It was an honor for me to be invited and experience firsthand your incredible culinary gift!</p></section>
@@ -119,8 +123,8 @@ function Home() {
                                     <br/>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. </p>
                 </section>
                 <section>
-                    <img src={homebanner} className="about-img" />
-                    <img src={homebanner} className="about-img" />
+                    <img src={restaurant} className="about-img" alt="restaurant view"/>
+                    <img src={restaurant_chef} className="about-img" alt="picture of restaurant chef"/>
                 </section>
             </section>
         </main>
