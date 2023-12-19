@@ -1,13 +1,13 @@
-import reserve_table_banner from "../assets/images/reservetable.jpg"
+import reserve_table_banner from "../assets/images/reserva_a_table.jpg"
 function Reservations() {
     return (
         <main className="main-reservation">
             <article className="reservation-banner">
-                <section>
+                <section className="reservation-banner-desc">
                     <h1>Reserve a Table</h1>
                     <p>at little lemon Chicago</p>
                     <p>Make sure you create an account and enter all your information accurately before completing your reservation</p>
-                    <button>Create an account</button>
+                    <button className="yello-btn">Create an account</button>
                 </section>
                 <img src={reserve_table_banner} alt="a dish with one fish"/>
                 <section>
