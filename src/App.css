@@ -18,7 +18,7 @@
 .App-header {
   background-color: #fff;
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
   /* width: 90vw; */
   margin: 20px auto;
@@ -338,3 +338,4 @@ footer h4 {
   height: 246px;
   margin-right: 73px;
 }
+
