@@ -18,60 +18,70 @@ function Reservations() {
                 <h2>Reservation Details</h2>
                 <section>
                     <form>
-                        <label>Number of Guests </label>
-                        <select name="" id="">
-                            <option>Select a number</option>
-                            <option>1</option>
-                            <option>2</option>
-                            <option>3</option>
-                            <option>4</option>
-                            <option>5</option>
-                            <option>more than 5 people</option>
+                        <label for="guestnumber">Number of Guests: </label>
+                        <select name="guests" id="guestnumber">
+                            <option value="select">Select a number</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="more">more than 5 people</option>
                         </select>
-                        <div>
-                            <label id="">Time available</label>
-                            <select name="" id="">
-                                <option>1</option>
-                                <option>2</option>
-                                <option>3</option>
-                                <option>5</option>
-                                <option>6</option>
-                                <option>7</option>
-                                <option>8</option>
-                                <option>12</option>
-                                <option>13</option>
-                                <option>14</option>
-                                <option>15</option>
-                                <option>16</option>
-                                <option>18</option>
-                                <option>19</option>
-                                <option>20</option>
-                                <option>22</option>
-                                <option>23</option>
-                                <option>24</option>
+                        <div className="time">
+                            <label for="time_available">Time available</label>
+                            <select name="Day" id="time_available">
+                                <option value="day">Day</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="12">12</option>
+                                <option value="13">13</option>
+                                <option value="14">14</option>
+                                <option value="15">15</option>
+                                <option value="16">16</option>
+                                <option value="18">18</option>
+                                <option value="19">19</option>
+                                <option value="20">20</option>
+                                <option value="22">22</option>
+                                <option value="23">23</option>
+                                <option value="24">24</option>
                             </select>
-                            <select name="" id="">
-                                <option>Hour</option>
-                                <option>12:00</option>
-                                <option>12:30</option>
-                                <option>13:00</option>
-                                <option>13:30</option>
-                                <option>14:00</option>
-                                <option>14:30</option>
-                                <option>15:00</option>
-                                <option>15:30</option>
-                                <option>16:00</option>
-                                <option>16:30</option>
-                                <option>17:00</option>
-                                <option>17:30</option>
-                                <option>18:00</option>
-                                <option>18:30</option>
-                                <option>19:00</option>
-                                <option>19:30</option>
-                                <option>20:00</option>
-                                <option>20:30</option>
-                                <option>21:00</option>
-                                <option>21:30</option>
+                            <select name="Hour" id="time_available">
+                                <option value="hour">Hour</option>
+                                <option value="12">12:00</option>
+                                <option value="12.5">12:30</option>
+                                <option value="13">13:00</option>
+                                <option value="13.5">13:30</option>
+                                <option value="14">14:00</option>
+                                <option value="14.5">14:30</option>
+                                <option value="15">15:00</option>
+                                <option value="15.5">15:30</option>
+                                <option value="16">16:00</option>
+                                <option value="16.5">16:30</option>
+                                <option value="17">17:00</option>
+                                <option value="17.5">17:30</option>
+                                <option value="18">18:00</option>
+                                <option value="18.5">18:30</option>
+                                <option value="19">19:00</option>
+                                <option value="19.5">19:30</option>
+                                <option value="20">20:00</option>
+                                <option value="20.5">20:30</option>
+                                <option value="21">21:00</option>
+                                <option value="21.5">21:30</option>
+                            </select>
+                        </div>
+                        <div className="whereToSeat">
+                            <label for="seat">Where to Seat: </label>
+                            <select name="seat" id="seat">
+                                <option value="outside" >outside</option>
+                                <option value="inside">inside</option>
+                                <option value="balkony">balkony</option>
+                                <option value="near_window">near window</option>
                             </select>
                         </div>
                         
