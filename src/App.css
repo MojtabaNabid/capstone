@@ -339,3 +339,102 @@ footer h4 {
   margin-right: 73px;
 }
 
+
+.detail {
+  width: 70vw;
+  margin: auto;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.detail label {
+  text-align: left;
+}
+
+.detail select{
+  /* text-align: right; */
+}
+
+.typeOfCeremony {
+  width: 68vw;
+  margin: 3rem auto;
+  padding: 10px;
+  display: grid;
+  grid-template-columns: repeat(3, 250px);
+  grid-template-rows: repeat(3, 40px);
+  justify-content: center;
+  justify-items: start;
+}
+
+fieldset {
+  border-radius: 10px;
+  border-width: 2px;
+}
+
+legend {
+  padding: 5px 8px;
+  margin-left: 50px;
+  text-align: left;
+  font-family: 'Markazi';
+  font-weight: bold;
+  font-size: 2rem;
+  text-transform: uppercase;
+}
+
+.customerdescription {
+  width: 70vw;
+  text-align: left;
+  margin: auto;
+  font-weight: bold;
+}
+
+.customerdescription label {
+  font-size: 2rem;
+  font-family: Markazi;
+  margin-left: 2rem;
+}
+
+#anythingtoadd {
+  width: 68vw;
+  border-width: 2px;
+  border-radius: 10px;
+  padding: 10px;
+  height: 6rem;
+}
+
+.textareadesc {
+  font-size: 0.65rem;
+  margin: 0 2rem 0.5rem;
+  text-transform: uppercase;
+  font-style: italic;
+  /* margin-left: 2rem; */
+}
+
+.submit {
+  width: 70vw;
+  margin: auto;
+  text-align: left;
+}
+
+input[type="submit"] {
+  margin-top: 3rem;
+  width: 10rem;
+  height: 3rem;
+  background-color: #fff;
+  /* color: #fff; */
+  font-weight: bold;
+  border-radius: 5px;
+  font-family: Markazi;
+  font-size: 1.2rem;
+
+}
+
+input[type="submit"]:active {
+  background-color: #A3A3A3;
+}
+
+input[type="submit"]:checked {
+  background-color: skyblue;
+}
