@@ -351,10 +351,44 @@ footer h4 {
 
 .detail label {
   text-align: left;
+  font-size: 1.3rem;
+  font-family: 'Karla-medium';
+  font-weight: bold;
 }
 
+.guest {
+  display: grid;
+  grid-template-columns: repeat(2, 200px);
+  column-gap: 30px;
+}
+.time {
+  display: grid;
+  grid-template-columns: repeat(2, 200px);
+  margin: 20px 0;
+  column-gap: 30px;
+}
+
+#day {
+  width: 80px;
+}
+
+#hour {
+  width: 80px;
+  margin-left: 40px;
+}
+
+
+.whereToSeat {
+  display: grid;
+  grid-template-columns: repeat(2, 200px);
+  column-gap: 30px;
+}
 .detail select{
-  /* text-align: right; */
+  height: 30px;
+  border-radius: 5px;
+  background-color: #D9D9D9;
+  font-family: 'Karla-medium';
+  font-size: 1.2rem;
 }
 
 .typeOfCeremony {
@@ -381,6 +415,11 @@ legend {
   font-weight: bold;
   font-size: 2rem;
   text-transform: uppercase;
+}
+
+.typeOfCeremony label {
+  font-weight: bold;
+  margin-left: 2px;
 }
 
 .customerdescription {
