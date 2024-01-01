@@ -14,6 +14,11 @@
   /* margin: auto; */
 }
 
+h1 {
+  font-family: 'Markazi';
+  font-size: 4rem;
+}
+
 /* Header */
 .App-header {
   background-color: #fff;
@@ -339,7 +344,7 @@ footer h4 {
   margin-right: 73px;
 }
 
-
+/* Reservation Details */
 .detail {
   width: 70vw;
   margin: auto;
@@ -404,7 +409,7 @@ footer h4 {
 
 fieldset {
   border-radius: 10px;
-  border-width: 2px;
+  border: 2px solid black;
 }
 
 legend {
@@ -476,4 +481,38 @@ input[type="submit"]:active {
 
 input[type="submit"]:checked {
   background-color: skyblue;
+}
+
+.reserv_conf {
+  width: 40vw;
+  margin: 6rem auto;
+}
+
+.reserv_conf div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.reserv_conf img {
+  width: 40px;
+  margin-right: 1em;
+}
+
+.reserv_conf h1, h2{
+font-family: "Markazi";
+}
+
+.reserv_conf h1 {
+  font-size: 4rem;
+  display: inline-block;
+}
+
+.reserv_conf h2 {
+  font-size: 2.5rem;
+}
+
+.reserv_conf p {
+  font-family: 'Karla-medium';
+  font-size: 1.3rem;
 }

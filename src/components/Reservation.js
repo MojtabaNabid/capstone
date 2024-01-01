@@ -98,7 +98,7 @@ function Reservations() {
                                 <input type="radio" id="birthday" name="ceremonytype" value="Birthday Party" />
                                 <label for="birthday">Birthday Party</label>
                             </div>
-                            
+
                             <div>
                                 <input type="radio" id="Romanticdate" name="ceremonytype" value="Romantic Date" />
                                 <label for="Romanticdate">Romantic Date</label>
@@ -127,14 +127,14 @@ function Reservations() {
                             <div>
                                 <input type="radio" id="conference" name="ceremonytype" value="Conference" />
                                 <label for="conference">Conference</label>
-                            </div>                           
+                            </div>
 
                             <div>
                                 <input type="radio" id="brunch" name="ceremonytype" value="Brunch" />
                                 <label for="brunch">Brunch</label>
                             </div>
                         </fieldset>
-                        
+
                         <div className="customerdescription">
                             <label for="anythingtoadd">Anything to Add</label>
                             <p className="textareadesc">Please add if you have any plan. Our team will contact you for further coordination</p>
@@ -142,20 +142,11 @@ function Reservations() {
                         </div>
 
                         <div className="submit">
-                            <input type="submit"  value="Submit" />
+                            <input type="submit" value="Submit" />
                         </div>
                     </form>
                 </section>
             </article>
-            <section>
-
-            </section>
-            <section>
-
-            </section>
-            <section>
-
-            </section>
         </main >
     )
 }
