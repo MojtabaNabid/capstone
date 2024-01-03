@@ -196,6 +196,7 @@ h2 {
   background-color: #D9D9D9;
   padding-top: 3rem;
   padding-bottom: 8rem;
+  width: 100vw;
 }
 
 .testimonials-items {
@@ -292,6 +293,7 @@ footer {
   column-gap: 2rem;
   height: 35vh;
   padding-top: 2rem;
+  width: 100vw;
 }
 
 footer .doormat_navigation{
@@ -580,6 +582,7 @@ font-family: "Markazi";
     background-color: red;  
   }
 
+  /* Menu */
   .App-header .menu-icon {
     display: grid;
   }
@@ -590,8 +593,6 @@ font-family: "Markazi";
     top: 90px;
     left: -236px;
   }
-
-
 
   .mobile-size {
     display: grid;
@@ -607,12 +608,50 @@ font-family: "Markazi";
     display: none;
   }
 
+  /* Home Banner */
   .home-banner {
-    margin: 2rem 0;
     grid-template-columns: 400px;
-    grid-template-rows: repeat(2, 200px);
+    grid-template-rows: repeat(2, 380px);
     row-gap: 1rem;
     justify-content: center;
     align-items: center;
+  }
+
+  /* Weeks Special */
+  .weekspecial {
+    width: 100vw;
+    /* overflow: scroll; */
+  }
+
+  .weekspecial-title {
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 2rem;
+  }
+  
+  .weekspecial-title h2 {
+    margin-bottom: 1rem;
+  }
+
+  .weekspecial .cards {
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+    overflow-x: scroll;
+  }
+
+  /* Testimonials */
+  .testimonials-items {
+    justify-content: start;
+    overflow-x: scroll;
+    padding: 20px;
+  }
+
+  .typeOfCeremony {
+    grid-template-columns: repeat(3, 200px);
+  }
+
+  footer {
+    grid-template-columns: repeat(4, 129px);
+    height: 42vh;
   }
 }

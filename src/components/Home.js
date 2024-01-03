@@ -50,7 +50,7 @@ function Home() {
                             </section>
                         </section>
                     </section>
-                    <section className="card1">
+                    <section className="card2">
                         <img src={bruchetta} />
                         <section className="card-desc">
                             <section className="card-title-price">
@@ -64,7 +64,7 @@ function Home() {
                             </section>
                         </section>
                     </section>
-                    <section className="card1">
+                    <section className="card3">
                         <img src={lemondessert} />
                         <section className="card-desc">
                             <section className="card-title-price">

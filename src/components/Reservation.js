@@ -10,9 +10,7 @@ function Reservations() {
                     <button className="yello-btn">Create an account</button>
                 </section>
                 <img src={reserve_table_banner} alt="a dish with one fish" />
-                <section>
-                    <img src="" />
-                </section>
+                
             </article>
             <article className="reservation-details">
                 <h2>Reservation Details</h2>
