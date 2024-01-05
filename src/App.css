@@ -12,6 +12,10 @@
   box-sizing: border-box;
 }
 
+body {
+  width: 100vw;
+}
+
 .App {
   text-align: center;
   width: 100vw;
@@ -43,7 +47,7 @@ h1 {
 }
 
 .nav {
-  width: 40%;
+  width: 50%;
 }
 
 .nav ul{
@@ -249,7 +253,7 @@ h2 {
 }
 
 .about-desc {
-  width: 375px;
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -291,7 +295,7 @@ footer {
   background-color: #D9D9D9;
   /* align-items: center; */
   column-gap: 2rem;
-  height: 35vh;
+  height: 40vh;
   padding-top: 2rem;
   width: 100vw;
 }
@@ -533,7 +537,7 @@ font-family: "Markazi";
 }
 
 .reserv_conf p:last-of-type {
-  width: 400px;
+  /* width: 400px; */
   margin: auto;
 }
 
@@ -577,12 +581,8 @@ font-family: "Markazi";
 
 
 /* Responsive Design */
-@media only screen and (max-width: 768px) {
-  body {
-    background-color: red;  
-  }
 
-  /* Menu */
+@media only screen and (max-width: 1100px) {
   .App-header .menu-icon {
     display: grid;
   }
@@ -603,10 +603,33 @@ font-family: "Markazi";
     grid-template-columns: 200px;
     grid-template-rows: repeat(6, 35px);
   }
-
   .desktop-size {
     display: none;
   }
+  footer {
+    grid-template-columns: repeat(4, 129px);
+    height: 42vh;
+  }
+}
+
+
+
+/* Teblet Responsive */
+
+@media only screen and (max-width: 1000px) {
+  .testimonials-items {
+  grid-template-columns: repeat(2, 250px);
+  grid-template-rows: repeat(2, 340px);
+  row-gap: 1rem;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  body {
+    /* background-color: red;   */
+  }
+
+  /* Menu */
 
   /* Home Banner */
   .home-banner {
@@ -620,7 +643,8 @@ font-family: "Markazi";
   /* Weeks Special */
   .weekspecial {
     width: 100vw;
-    /* overflow: scroll; */
+    overflow-x: scroll;
+    padding: 2rem;
   }
 
   .weekspecial-title {
@@ -636,22 +660,131 @@ font-family: "Markazi";
   .weekspecial .cards {
     justify-content: flex-start;
     flex-wrap: nowrap;
-    overflow-x: scroll;
   }
 
   /* Testimonials */
+  .testimonials {
+    overflow: auto;
+    padding: 2rem 1rem 8rem 1rem;
+  }
   .testimonials-items {
     justify-content: start;
-    overflow-x: scroll;
+    /* overflow-x: scroll; */
     padding: 20px;
   }
 
+  /* About */
+  .about {
+    grid-template-columns: 400px;
+    grid-template-rows: 1fr 1fr;
+    height: 100vh;
+    row-gap: 1rem;
+    margin: 2rem;
+  }
+
+  /* Reservation Banner */
+  .reservation-banner {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* margin: 0; */
+  }
+
+  .reservation-banner-desc {
+    width: 70%;
+    margin: 2rem 0;
+  }
+
+  .reservation-banner img {
+    margin: 0;
+    border-radius: 5px;
+  }
+
   .typeOfCeremony {
-    grid-template-columns: repeat(3, 200px);
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    width: 70%;
+    margin: 2rem auto;
+  }
+}
+
+
+/* Mobile Responsive */
+@media only screen and (max-width: 600px) {
+  .homebanner-img {
+    max-width: 100%;
+    height: 400px;
+    max-height: 200px;
+  }
+
+  .testimonials-items {
+    grid-template-columns: 250px;
+    grid-template-rows: repeat(4, 340px);
+    row-gap: 1rem;
+    justify-content: center;
+    }
+  
+  .about {
+    width: 90vw;
+    margin: auto;
+    justify-items: center;
+    row-gap: 0;
+    grid-template-columns: 1fr; 
+  }
+
+  .about img {
+    position: static;
+  }
+
+  .reservation-banner-desc h1 {
+    font-size: 30pt;
+  }
+
+  .guest {
+    grid-template-columns: 1fr;
+    row-gap: 5px;
+    grid-template-rows: repeat(2, 1fr);
+  }
+  .time {
+    grid-template-columns: 1fr;
+    row-gap: 5px;
+    grid-template-rows: repeat(2, 1fr);
+  }
+  .whereToSeat {
+    grid-template-columns: 1fr;
+    row-gap: 5px;
+    grid-template-rows: repeat(2, 1fr);
+  }
+
+  legend {
+    font-size: 18pt;
+  }
+
+  .typeOfCeremony {
+    grid-template-columns: repeat(2, 1fr);
+    width: 90vw;
+    margin: 2rem auto;
+  }
+
+  .submit {
+    text-align: center;
+  }
+
+  h2 {
+    font-size: 3rem;
+  }
+
+  .signupform h1 {
+    font-size: 3rem;
+  }
+
+  .reserv_conf {
+    width: 70vw;
   }
 
   footer {
-    grid-template-columns: repeat(4, 129px);
-    height: 42vh;
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-columns: 200px;
+    height: 100%;
   }
 }
