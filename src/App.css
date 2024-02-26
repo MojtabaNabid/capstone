@@ -57,12 +57,12 @@ h1 {
   list-style-type: none;
 }
 
-.nav a {
+.nav link {
   text-decoration: none;
   color: #000;
 }
 
-.nav a:hover {
+.nav link:hover {
   color: #ccc;
 }
 

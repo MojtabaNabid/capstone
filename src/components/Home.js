@@ -12,7 +12,7 @@ import person3 from "../assets/images/person3.png"
 import person4 from "../assets/images/person4.png"
 import restaurant from "../assets/images/restaurant.jpg"
 import restaurant_chef from "../assets/images/restaurantchef.jpg"
-
+import {Link} from 'react-router-dom'
 
 
 
@@ -24,7 +24,7 @@ function Home() {
                     <h1>Little Lemon</h1>
                     <p>Little Lemon</p>
                     <p className="homebanner-desc">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.</p>
-                    <button className="yello-btn">Reserve a Table</button>
+                    <button className="yello-btn"><Link to="/reservation">Reserve a Table</Link></button>
                 </section>
                 <section>
                     <img src={homebanner} className="homebanner-img" />
