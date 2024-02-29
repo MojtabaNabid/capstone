@@ -1,6 +1,12 @@
 import {Link} from 'react-router-dom'
 import reserve_table_banner from "../assets/images/reserva_a_table.jpg"
 function Reservations() {
+
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+    }
+
     return (
         <main className="main-reservation">
             <article className="reservation-banner">
@@ -16,10 +22,10 @@ function Reservations() {
             <article className="reservation-details">
                 <h2>Reservation Details</h2>
                 <section>
-                    <form>
+                    <form onSubmit={handleSubmit}>
                         <section className="detail">
                             <div className="guest">
-                                <label for="guestnumber">Number of Guests: </label>
+                                <label htmlFor="guestnumber">Number of Guests: </label>
                                 <select name="guests" id="guestnumber">
                                     <option value="select">Select a number</option>
                                     <option value="1">1</option>
@@ -32,7 +38,7 @@ function Reservations() {
                             </div>
 
                             <div className="time">
-                                <label for="time_available">Time available</label>
+                                <label htmlFor="time_available">Time available</label>
                                 <div>
                                     <select name="time_available" id="day">
                                         <option value="day">Day</option>
@@ -82,7 +88,7 @@ function Reservations() {
                             </div>
 
                             <div className="whereToSeat">
-                                <label for="seat">Where to Seat: </label>
+                                <label htmlFor="seat">Where to Seat: </label>
                                 <select name="seat" id="seat">
                                     <option value="outside" >outside</option>
                                     <option value="inside">inside</option>
@@ -95,47 +101,47 @@ function Reservations() {
                             <legend>Types of Ceremony</legend>
                             <div>
                                 <input type="radio" id="birthday" name="ceremonytype" value="Birthday Party" />
-                                <label for="birthday">Birthday Party</label>
+                                <label htmlFor="birthday">Birthday Party</label>
                             </div>
 
                             <div>
                                 <input type="radio" id="Romanticdate" name="ceremonytype" value="Romantic Date" />
-                                <label for="Romanticdate">Romantic Date</label>
+                                <label htmlFor="Romanticdate">Romantic Date</label>
                             </div>
 
                             <div>
                                 <input type="radio" id="Familyhangout" name="ceremonytype" value="Family Hang Out" />
-                                <label for="Familyhangout">Family Hang Out</label>
+                                <label htmlFor="Familyhangout">Family Hang Out</label>
                             </div>
 
                             <div>
                                 <input type="radio" id="businessmeeting" name="ceremonytype" value="Business Meeting" />
-                                <label for="businessmeeting">Business Meeting</label>
+                                <label htmlFor="businessmeeting">Business Meeting</label>
                             </div>
 
                             <div>
                                 <input type="radio" id="event" name="ceremonytype" value="Event" />
-                                <label for="event">Evnet</label>
+                                <label htmlFor="event">Evnet</label>
                             </div>
 
                             <div>
                                 <input type="radio" id="others" name="ceremonytype" value="Others" />
-                                <label for="others">Others</label>
+                                <label htmlFor="others">Others</label>
                             </div>
 
                             <div>
                                 <input type="radio" id="conference" name="ceremonytype" value="Conference" />
-                                <label for="conference">Conference</label>
+                                <label htmlFor="conference">Conference</label>
                             </div>
 
                             <div>
                                 <input type="radio" id="brunch" name="ceremonytype" value="Brunch" />
-                                <label for="brunch">Brunch</label>
+                                <label htmlFor="brunch">Brunch</label>
                             </div>
                         </fieldset>
 
                         <div className="customerdescription">
-                            <label for="anythingtoadd">Anything to Add</label>
+                            <label htmlFor="anythingtoadd">Anything to Add</label>
                             <p className="textareadesc">Please add if you have any plan. Our team will contact you for further coordination</p>
                             <textarea id="anythingtoadd" name="customerdescription" rows="4" cols="50">type here ...</textarea>
                         </div>
