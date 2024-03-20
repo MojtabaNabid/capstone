@@ -7,7 +7,7 @@ function Nav() {
             <nav className="nav desktop-size">
                 <ul>
                     <li><Link to="/" className="nav-item" >Home</Link></li>
-                    <li><Link to="/about" className="nav-item" >about</Link></li>
+                    <li><Link to="/aboutme" className="nav-item" >about</Link></li>
                     <li><Link to="/Menu" className="nav-item" >Menu</Link></li>
                     <li><Link to="/reservation" className="nav-item">Reservations</Link></li>
                     <li><Link to="/order-online" className="nav-item" >Order Online</Link></li>

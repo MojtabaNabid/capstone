@@ -66,7 +66,9 @@ function Signup() {
                         value={formData.address}
                         onChange={e => setformData({...formData, address: e.target.value})}>Type here...</textarea>
 
-                    <button value="submit" disabled={!formData.nameAndFamily}>Sumbit</button>
+                    <div className="submit">
+                        <input type="submit" value="submit" disabled={!formData.nameAndFamily} />
+                    </div>
 
                 </form>
                 <p></p>
