@@ -3,7 +3,7 @@ import greeksalad from "../assets/images/greek salad.jpg"
 import motorcycle from "../assets/images/motorcycle-svgrepo-com.svg"
 import bruchetta from "../assets/images/bruchetta.jpg"
 import lemondessert from "../assets/images/lemon dessert.jpg"
-import certificate from "../assets/images/certificate-testimonials.svg"
+// import certificate from "../assets/images/certificate-testimonials.svg"
 import star5 from "../assets/images/5-star.png"
 import star4 from "../assets/images/4-star.png"
 import person1 from "../assets/images/person1.png"
@@ -27,7 +27,7 @@ function Home() {
                     <button className="yello-btn"><Link to="/reservation">Reserve a Table</Link></button>
                 </section>
                 <section>
-                    <img src={homebanner} className="homebanner-img" />
+                    <img src={homebanner} className="homebanner-img" alt="one of our food items" />
                 </section>
             </section>
             <section className="weekspecial">
@@ -37,7 +37,7 @@ function Home() {
                 </header>
                 <article className="cards">
                     <section className="card1">
-                        <img src={greeksalad} />
+                        <img src={greeksalad} alt="Greek salad"/>
                         <section className="card-desc">
                             <section className="card-title-price">
                                 <h4>Greek Salad</h4>
@@ -45,13 +45,13 @@ function Home() {
                             </section>
                             <p className="card-recipe">The famous greek salad of crispy lettuce, peppers, olives and our Chicago style feta cheese, garnished with crunchy garlic and rosemary croutons. </p>
                             <section className="card-calltoaction">
-                                <a>Order a Delivery</a>
-                                <a><img src={motorcycle} style={{ width: "20px" }} /></a>
+                                <a href="#">Order a Delivery</a>
+                                <a href="#"><img src={motorcycle} style={{ width: "20px" }} alt="Bike Icon" /></a>
                             </section>
                         </section>
                     </section>
                     <section className="card2">
-                        <img src={bruchetta} />
+                        <img src={bruchetta} alt="Bruchetta" />
                         <section className="card-desc">
                             <section className="card-title-price">
                                 <h4>Bruchetta</h4>
@@ -59,13 +59,13 @@ function Home() {
                             </section>
                             <p className="card-recipe">Our Bruschetta is made from grilled bread that has been smeared with garlic and seasoned with salt and olive oil. </p>
                             <section className="card-calltoaction">
-                                <a>Order a Delivery</a>
-                                <a><img src={motorcycle} style={{ width: "20px" }} /></a>
+                                <a href="#">Order a Delivery</a>
+                                <a href="#"><img src={motorcycle} style={{ width: "20px" }} alt="Bike Icon" /></a>
                             </section>
                         </section>
                     </section>
                     <section className="card3">
-                        <img src={lemondessert} />
+                        <img src={lemondessert} alt="lemondessert" />
                         <section className="card-desc">
                             <section className="card-title-price">
                                 <h4>Lemon Dessert</h4>
@@ -73,8 +73,8 @@ function Home() {
                             </section>
                             <p className="card-recipe">This comes straight from grandma’s recipe book, every last ingredient has been sourced and is as authentic as can be imagined. </p>
                             <section className="card-calltoaction">
-                                <a>Order a Delivery</a>
-                                <a><img src={motorcycle} style={{ width: "20px" }} alt="motorcycle icon"/></a>
+                                <a href="#">Order a Delivery</a>
+                                <a href="#"><img src={motorcycle} style={{ width: "20px" }} alt="motorcycle icon"/></a>
                             </section>
                         </section>
                     </section>

@@ -3,39 +3,32 @@ import { useState } from "react";
 
 function BookingForm(props) {
 
+    // data from all parts of form except the available times
     const [bookingForm, setbookingForm] = useState({
         numberOfGeusts: 0,
-        // day: "",
+        time: "",
         // hour: "",
         whereToSeat: "",
         typeOfCeremony: "",
         customerdescription: ""
     })
     
+    // dispatch function for available times
     const handleTime = (e) => {
         props.dispatch({
             type: "time",
             daySelected: e.target.value
         })
+        setbookingForm({...bookingForm, time: e.target.value})
     }
-
-    // const handleHour = (e) => {
-    //     props.dispatch({
-    //         type: "hour",
-    //         hourSelected: e.target.value
-    //     })
-    // }
-
     
-
     const handleSubmit = (e) => {
         e.preventDefault();
         console.log("form submitted!");
         console.log(bookingForm)
         setbookingForm({
             numberOfGeusts: 0,
-            // day: "",
-            // hour: "",
+            time: "",
             whereToSeat: "",
             typeOfCeremony: "",
             customerdescription: ""
@@ -71,34 +64,23 @@ function BookingForm(props) {
 
                             <div className="time">
                                 <label htmlFor="time_available">Time available</label>
-                                <div id="time_available">
-                                    {/* <p>{props.state.daySelected}</p> */}
-                                    <select name="time_available" 
-                                        id="time" 
-                                        // value={bookingForm.day}
-                                        value={props.state.timeSelected}
-                                        // onChange={e => setbookingForm({...bookingForm, day: e.target.value})}
+                                <div>
+                                    {/* <p>{props.state.timeSelected}</p> */}
+                                    <select 
+                                        name="time_available" 
+                                        id="time_available" 
+                                        value={bookingForm.time}
                                         onChange={handleTime}
                                         >
+
                                         {props.state.time.map((item, index) => {
                                             return <option key={index} value={item}>{item}</option>
                                         })}
                                     </select>
-
-                                    {/* <select name="time_available" 
-                                        id="hour"
-                                        // value={bookingForm.hour}
-                                        value={props.state.finalHour}
-                                        // onChange={e => setbookingForm({...bookingForm, hour: e.target.value})}
-                                        onChange={handleHour}
-                                        >
-                                        {props.state.hour.map((item, index) => {
-                                            return <option key={index} value={item}>{item}</option>
-                                        })}
-                                    </select> */}
                                 </div>
                             </div>
 
+                            {/* choosing where to seat */}
                             <div className="whereToSeat">
                                 <label htmlFor="seat">Where to Seat: </label>
                                 <select name="seat" 

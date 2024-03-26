@@ -8,7 +8,7 @@ function Footer() {
     return (
         <footer>
             <section>
-                <img src={footer_logo} alt="footer logo image"/>
+                <img src={footer_logo} alt="footer logo"/>
             </section>
             <section>
                 <h4>Doormat Navigation</h4>
