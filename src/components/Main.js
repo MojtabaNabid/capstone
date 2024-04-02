@@ -20,14 +20,27 @@ export function updateTimes(state, action) {
       return { ...state, date: action.daySelected, hour: newDay}
 
     case 'hour':
-      // console.log(action.hourSelected)
       return { ...state, time: action.hourSelected }
+    case 'guestnumber':
+      return{...state, numberOfGeusts: action.numberOfGeusts}
+    case 'whereToSeat':
+      return{...state, whereToSeat: action.whereToSeat}
+    case 'typeOfCeremony':
+      return{...state, typeOfCeremony: action.typeOfCeremony}
+    case 'customerdescription':
+      return {...state, customerdescription: action.customerdescription,}
     case 'reservationSlot':
       let submitStatus = submitAPI(state)
+      // console.log(state)
       if(submitStatus){
         const newTimeAvailable = fetchAPI(state.date)
-        // console.log(newTimeAvailable)
-        return {...state, hour: newTimeAvailable}
+        return {...state,
+                hour: newTimeAvailable,
+                numberOfGeusts: 0,
+                whereToSeat: "",
+                typeOfCeremony: "",
+                customerdescription: ""
+              }
       }
         // state.day = availableTimesByDate
       break;
@@ -56,17 +69,20 @@ export function initializeTimes() {
     hour: returnedDate,
     date: "",
     time: "",
+    numberOfGeusts: 0,
+    whereToSeat: "",
+    typeOfCeremony: "",
+    customerdescription: "",
   })
 }
 
 function Main() {
   const [state, dispatch] = useReducer(updateTimes, initializeTimes())
-  // console.log(state.hour)
 
 
-  function submitForm() {
-    
-  }
+  // function submitForm() {
+
+  // }
 
   return (
     <div className="main">
@@ -74,7 +90,7 @@ function Main() {
         <Route path="/" element={<Home />} />
         <Route path="/reservation" element={<Reservations state={state} dispatch={dispatch} />} />
         <Route path="/login" element={<Signup />} />
-        <Route path="/confirmation" element={<ConfirmedBooking />} />
+        <Route path="/confirmation" element={<ConfirmedBooking state={state} />} />
         <Route path="/menu" element={<Menu />} />
         <Route path="/aboutme" element={<Aboutme />} />
       </Routes>

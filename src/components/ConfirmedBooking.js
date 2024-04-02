@@ -1,11 +1,12 @@
 import checkIcon from "../assets/images/check_icon.png"
-function ConfirmedBooking() {
+
+function ConfirmedBooking(props) {
     const customerEmail = ""
     const username = ""
-    const date = ""
-    const typeOfCeremony = ""
-    const whereToSeat = ""
-    const explanation = ""
+    const date = props.state.date
+    const typeOfCeremony = props.state.typeOfCeremony
+    const whereToSeat = props.state.typeOfCeremony
+    const explanation = props.stat.customerdescription
     return (
         <main className="reserv_conf">
             <div>

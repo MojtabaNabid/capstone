@@ -13,8 +13,8 @@ function Signup() {
     const handleSumbit = (e) => {
         e.preventDefault();
         console.log("form submitted!");
-        setformData({...formData, nameAndFamily:"", phone:"", email:"", pass:"", passConf:"", address:""});
         console.log(formData)
+        setformData({...formData, nameAndFamily:"", phone:"", email:"", pass:"", passConf:"", address:""});
     }
 
 

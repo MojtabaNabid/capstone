@@ -6,14 +6,14 @@ function BookingForm(props) {
     const [hourFetched, sethourFetched] = useState(["hour"])
     
     // data from all parts of form except the available times
-    const [bookingForm, setbookingForm] = useState({
-        numberOfGeusts: 0,
-        day: "",
-        hour: "",
-        whereToSeat: "",
-        typeOfCeremony: "",
-        customerdescription: ""
-    })
+    // const [bookingForm, setbookingForm] = useState({
+    //     numberOfGeusts: 0,
+    //     day: "",
+    //     hour: "",n
+    //     whereToSeat: "",
+    //     typeOfCeremony: "",
+    //     customerdescription: ""
+    // })
     
     useEffect(() => {
         props.state.hour.then(array => {
@@ -29,28 +29,28 @@ function BookingForm(props) {
             type: "day",
             daySelected: e.target.value
         })
-        setbookingForm({...bookingForm, day: e.target.value})
+        // setbookingForm({...bookingForm, day: e.target.value})
     }
     const handleHour = (e) => {
         props.dispatch({
             type: "hour",
             hourSelected: e.target.value
         })
-        setbookingForm({...bookingForm, hour : e.target.value})
+        // setbookingForm({...bookingForm, hour : e.target.value})
     }
     
     const handleSubmit = (e) => {
         e.preventDefault();
         console.log("form submitted!");
-        console.log(bookingForm)
-        setbookingForm({
-            numberOfGeusts: 0,
-            day: "",
-            hour: "",
-            whereToSeat: "",
-            typeOfCeremony: "",
-            customerdescription: ""
-        })
+        console.log(props.state)
+        // setbookingForm({
+        //     numberOfGeusts: 0,
+        //     day: "",
+        //     hour: "",
+        //     whereToSeat: "",
+        //     typeOfCeremony: "",
+        //     customerdescription: ""
+        // })
         
         props.dispatch({
             type: "reservationSlot"
@@ -68,8 +68,14 @@ function BookingForm(props) {
                                 <label htmlFor="guestnumber">Number of Guests: </label>
                                 <select name="guests" 
                                     id="guestnumber" 
-                                    value={bookingForm.numberOfGeusts} 
-                                    onChange={e => setbookingForm({...bookingForm, numberOfGeusts: e.target.value})}>
+                                    value={props.state.numberOfGeusts} 
+                                    // onChange={e => setbookingForm({...bookingForm, numberOfGeusts: e.target.value})}>
+                                    onChange={e => {
+                                        props.dispatch({
+                                        type: "guestnumber",
+                                        numberOfGeusts: e.target.value
+                                        })
+                                    }}>
                                     <option value="select">Select a number</option>
                                     <option value="1">1 person</option>
                                     <option value="2">2 people</option>
@@ -115,8 +121,15 @@ function BookingForm(props) {
                                 <label htmlFor="seat">Where to Seat: </label>
                                 <select name="seat" 
                                     id="seat"
-                                    value={bookingForm.whereToSeat}
-                                    onChange={e => setbookingForm({...bookingForm, whereToSeat: e.target.value})}>
+                                    value={props.state.whereToSeat}
+                                    // onChange={e => setbookingForm({...bookingForm, whereToSeat: e.target.value})}
+                                    onChange={e => {
+                                        props.dispatch({
+                                        type: "whereToSeat",
+                                        whereToSeat: e.target.value
+                                        })
+                                    }}
+                                    >
                                     <option value="select" >select</option>
                                     <option value="outside" >outside</option>
                                     <option value="inside">inside</option>
@@ -133,8 +146,16 @@ function BookingForm(props) {
                                     id="birthday" 
                                     name="ceremonytype" 
                                     value="Birthday Party"
-                                    onChange={e => setbookingForm({...bookingForm, typeOfCeremony: e.target.value})}
-                                    checked={bookingForm.typeOfCeremony === "Birthday Party"}     
+                                    // onChange={e => setbookingForm({...bookingForm, typeOfCeremony: e.target.value})}
+
+                                    onChange={e => {
+                                        props.dispatch({
+                                        type: "typeOfCeremony",
+                                        typeOfCeremony: "Birthday Party"
+                                        })
+                                    }}
+
+                                    checked={props.state.typeOfCeremony === "Birthday Party"}     
                                 />
                                 <label htmlFor="birthday">Birthday Party</label>
                             </div>
@@ -145,8 +166,16 @@ function BookingForm(props) {
                                     id="Romanticdate" 
                                     name="ceremonytype" 
                                     value="Romantic Date"
-                                    onChange={e => setbookingForm({...bookingForm, typeOfCeremony: e.target.value})}
-                                    checked={bookingForm.typeOfCeremony === "Romantic Date"}
+                                    // onChange={e => setbookingForm({...bookingForm, typeOfCeremony: e.target.value})}
+
+                                    onChange={e => {
+                                        props.dispatch({
+                                        type: "typeOfCeremony",
+                                        typeOfCeremony: "Romantic Date"
+                                        })
+                                    }}
+
+                                    checked={props.state.typeOfCeremony === "Romantic Date"}
                                 />
                                 <label htmlFor="Romanticdate">Romantic Date</label>
                             </div>
@@ -157,8 +186,16 @@ function BookingForm(props) {
                                     id="Familyhangout" 
                                     name="ceremonytype" 
                                     value="Family Hang Out"
-                                    onChange={e => setbookingForm({...bookingForm, typeOfCeremony: e.target.value})}
-                                    checked={bookingForm.typeOfCeremony === "Family Hang Out"}
+                                    // onChange={e => setbookingForm({...bookingForm, typeOfCeremony: e.target.value})}
+
+                                    onChange={e => {
+                                        props.dispatch({
+                                        type: "typeOfCeremony",
+                                        typeOfCeremony: "Family Hang Out"
+                                        })
+                                    }}
+
+                                    checked={props.state.typeOfCeremony === "Family Hang Out"}
                                 />
                                 <label htmlFor="Familyhangout">Family Hang Out</label>
                             </div>
@@ -169,8 +206,16 @@ function BookingForm(props) {
                                     id="businessmeeting" 
                                     name="ceremonytype" 
                                     value="Business Meeting"
-                                    onChange={e => setbookingForm({...bookingForm, typeOfCeremony: e.target.value})}
-                                    checked={bookingForm.typeOfCeremony === "Business Meeting"}
+                                    // onChange={e => setbookingForm({...bookingForm, typeOfCeremony: e.target.value})}
+
+                                    onChange={e => {
+                                        props.dispatch({
+                                        type: "typeOfCeremony",
+                                        typeOfCeremony: "Business Meeting"
+                                        })
+                                    }}
+                                    
+                                    checked={props.state.typeOfCeremony === "Business Meeting"}
                                 />
                                 <label htmlFor="businessmeeting">Business Meeting</label>
                             </div>
@@ -181,8 +226,16 @@ function BookingForm(props) {
                                     id="event" 
                                     name="ceremonytype" 
                                     value="Event"
-                                    onChange={e => setbookingForm({...bookingForm, typeOfCeremony: e.target.value})}
-                                    checked={bookingForm.typeOfCeremony === "Event"}
+                                    // onChange={e => setbookingForm({...bookingForm, typeOfCeremony: e.target.value})}
+
+                                    onChange={e => {
+                                        props.dispatch({
+                                        type: "typeOfCeremony",
+                                        typeOfCeremony: "Event"
+                                        })
+                                    }}
+
+                                    checked={props.state.typeOfCeremony === "Event"}
                                 />
                                 <label htmlFor="event">Evnet</label>
                             </div>
@@ -193,8 +246,14 @@ function BookingForm(props) {
                                     id="others" 
                                     name="ceremonytype" 
                                     value="Others"
-                                    onChange={e => setbookingForm({...bookingForm, typeOfCeremony: e.target.value})}
-                                    checked={bookingForm.typeOfCeremony === "Others"}
+                                    // onChange={e => setbookingForm({...bookingForm, typeOfCeremony: e.target.value})}
+                                    onChange={e => {
+                                        props.dispatch({
+                                        type: "typeOfCeremony",
+                                        typeOfCeremony: "Others"
+                                        })
+                                    }}
+                                    checked={props.state.typeOfCeremony === "Others"}
                                 />
                                 <label htmlFor="others">Others</label>
                             </div>
@@ -205,8 +264,14 @@ function BookingForm(props) {
                                     id="conference" 
                                     name="ceremonytype" 
                                     value="Conference" 
-                                    onChange={e => setbookingForm({...bookingForm, typeOfCeremony: e.target.value})}
-                                    checked={bookingForm.typeOfCeremony === "Conference"}
+                                    // onChange={e => setbookingForm({...bookingForm, typeOfCeremony: e.target.value})}
+                                    onChange={e => {
+                                        props.dispatch({
+                                        type: "typeOfCeremony",
+                                        typeOfCeremony: "Conference"
+                                        })
+                                    }}
+                                    checked={props.state.typeOfCeremony === "Conference"}
                                 />
                                 <label htmlFor="conference">Conference</label>
                             </div>
@@ -217,8 +282,14 @@ function BookingForm(props) {
                                     id="brunch" 
                                     name="ceremonytype" 
                                     value="Brunch" 
-                                    onChange={e => setbookingForm({...bookingForm, typeOfCeremony: e.target.value})}
-                                    checked={bookingForm.typeOfCeremony === "Brunch"}
+                                    // onChange={e => setbookingForm({...bookingForm, typeOfCeremony: e.target.value})}
+                                    onChange={e => {
+                                        props.dispatch({
+                                        type: "typeOfCeremony",
+                                        typeOfCeremony: "Brunch"
+                                        })
+                                    }}
+                                    checked={props.state.typeOfCeremony === "Brunch"}
                                 />
                                 <label htmlFor="brunch">Brunch</label>
                             </div>
@@ -233,8 +304,14 @@ function BookingForm(props) {
                                     name="customerdescription"
                                     rows="4"
                                     cols="50"
-                                    value={bookingForm.customerdescription}
-                                    onChange={e => setbookingForm({...bookingForm, customerdescription: e.target.value})}
+                                    value={props.state.customerdescription}
+                                    // onChange={e => setbookingForm({...bookingForm, customerdescription: e.target.value})}
+                                    onChange={e => {
+                                        props.dispatch({
+                                        type: "customerdescription",
+                                        customerdescription: e.target.value
+                                        })
+                                    }}
                                 >type here ...</textarea>
                             </div>
                         </div>
