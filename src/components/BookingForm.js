@@ -1,25 +1,42 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 
 function BookingForm(props) {
 
+    const [hourFetched, sethourFetched] = useState(["hour"])
+    
     // data from all parts of form except the available times
     const [bookingForm, setbookingForm] = useState({
         numberOfGeusts: 0,
-        time: "",
-        // hour: "",
+        day: "",
+        hour: "",
         whereToSeat: "",
         typeOfCeremony: "",
         customerdescription: ""
     })
     
+    useEffect(() => {
+        props.state.hour.then(array => {
+            sethourFetched(array); 
+        });
+      }, [props.state.hour])
+    
+    
+
     // dispatch function for available times
-    const handleTime = (e) => {
+    const handleDay = (e) => {
         props.dispatch({
-            type: "time",
+            type: "day",
             daySelected: e.target.value
         })
-        setbookingForm({...bookingForm, time: e.target.value})
+        setbookingForm({...bookingForm, day: e.target.value})
+    }
+    const handleHour = (e) => {
+        props.dispatch({
+            type: "hour",
+            hourSelected: e.target.value
+        })
+        setbookingForm({...bookingForm, hour : e.target.value})
     }
     
     const handleSubmit = (e) => {
@@ -28,7 +45,8 @@ function BookingForm(props) {
         console.log(bookingForm)
         setbookingForm({
             numberOfGeusts: 0,
-            time: "",
+            day: "",
+            hour: "",
             whereToSeat: "",
             typeOfCeremony: "",
             customerdescription: ""
@@ -63,20 +81,32 @@ function BookingForm(props) {
                             </div>
 
                             <div className="time">
-                                <label htmlFor="time_available">Time available</label>
+                                <label htmlFor="time_available">Time available:</label>
                                 <div>
-                                    {/* <p>{props.state.timeSelected}</p> */}
+                                    <p className="bookTimeStatus"> {props.state.date} - {props.state.time} </p>
                                     <select 
                                         name="time_available" 
                                         id="time_available" 
-                                        value={bookingForm.time}
-                                        onChange={handleTime}
+                                        value={props.state.date}
+                                        onChange={handleDay}
                                         >
 
-                                        {props.state.time.map((item, index) => {
+                                        {props.state.day.map((item, index) => {
                                             return <option key={index} value={item}>{item}</option>
                                         })}
                                     </select>
+                                    
+                                    <select 
+                                        name="hour_available" 
+                                        id="hour_available" 
+                                        value={props.state.time}
+                                        onChange={handleHour}
+                                        >
+                                        {hourFetched.map((item, index) => {
+                                            return <option key={index} value={item}>{item}</option>
+                                        })}
+                                    </select>
+
                                 </div>
                             </div>
 

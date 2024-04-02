@@ -1,5 +1,5 @@
 import checkIcon from "../assets/images/check_icon.png"
-function Confirmation() {
+function ConfirmedBooking() {
     const customerEmail = ""
     const username = ""
     const date = ""
@@ -23,4 +23,4 @@ function Confirmation() {
     )
 }
 
-export default Confirmation
+export default ConfirmedBooking

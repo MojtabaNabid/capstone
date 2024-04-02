@@ -4,8 +4,8 @@ import BookingForm from './BookingForm';
 
 
 function Reservations(props) {
-    if(props.state.time)
-        console.log("true")
+    // if(props.state.time)
+    //     console.log("true")
 
     return (
         <main className="main-reservation">
