@@ -43,18 +43,13 @@ function BookingForm(props) {
         e.preventDefault();
         console.log("form submitted!");
         console.log(props.state)
-        // setbookingForm({
-        //     numberOfGeusts: 0,
-        //     day: "",
-        //     hour: "",
-        //     whereToSeat: "",
-        //     typeOfCeremony: "",
-        //     customerdescription: ""
-        // })
+        
+        props.submitForm(props.state)
         
         props.dispatch({
             type: "reservationSlot"
         })
+
     }
             
     return (

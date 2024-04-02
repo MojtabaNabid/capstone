@@ -19,7 +19,7 @@ function Reservations(props) {
                 <img src={reserve_table_banner} alt="a dish with one fish" />
                 
             </article>
-            <BookingForm state={props.state} dispatch={props.dispatch} />
+            <BookingForm state={props.state} dispatch={props.dispatch} submitForm={props.submitForm} />
         </main >
     )
 }

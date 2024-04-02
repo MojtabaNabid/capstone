@@ -7,6 +7,7 @@ import Aboutme from "./Aboutme.js"
 import { Routes, Route } from 'react-router-dom'
 import { useReducer } from "react"
 import {fetchAPI,submitAPI} from "../mockAPI.js"
+import { useNavigate } from "react-router-dom";
 
 // Tomorrow tasks :
 // update sign up form and store user data in a useStat hook
@@ -78,19 +79,21 @@ export function initializeTimes() {
 
 function Main() {
   const [state, dispatch] = useReducer(updateTimes, initializeTimes())
+  const navigate = useNavigate();
 
-
-  // function submitForm() {
-
-  // }
+  const submitForm = (state) => {
+    if (submitAPI(state)) {
+      navigate("/ConfirmedBooking");
+    }
+  }
 
   return (
     <div className="main">
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/reservation" element={<Reservations state={state} dispatch={dispatch} />} />
+        <Route path="/reservation" element={<Reservations state={state} dispatch={dispatch} submitForm={submitForm} />} />
         <Route path="/login" element={<Signup />} />
-        <Route path="/confirmation" element={<ConfirmedBooking state={state} />} />
+        <Route path="/ConfirmedBooking" element={<ConfirmedBooking state={state} />} />
         <Route path="/menu" element={<Menu />} />
         <Route path="/aboutme" element={<Aboutme />} />
       </Routes>
