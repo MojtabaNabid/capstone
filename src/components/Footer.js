@@ -3,6 +3,8 @@ import instagram from "../assets/images/instagram50-icon.png"
 import twitter from "../assets/images/twitter-icon.png"
 import facebook from "../assets/images/facebook-icon.png"
 import linkedin from "../assets/images/linkedin-icon.png"
+import {Link} from 'react-router-dom'
+
 
 function Footer() {
     return (
@@ -13,19 +15,19 @@ function Footer() {
             <section>
                 <h4>Doormat Navigation</h4>
                 <ul className="doormat_navigation">
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">about</a></li>
-                    <li><a href="#">menu</a></li>
-                    <li><a href="#">Reservation</a></li>
-                    <li><a href="#">Order Online</a></li>
-                    <li><a href="#">Login</a></li>
+                    <li><Link to="/" className="nav-item" >Home</Link></li>
+                    <li><Link to="/aboutme" className="nav-item" >about</Link></li>
+                    <li><Link to="/Menu" className="nav-item" >Menu</Link></li>
+                    <li><Link to="/reservation" className="nav-item">Reservations</Link></li>
+                    <li><Link to="/order-online" className="nav-item" >Order Online</Link></li>
+                    <li><Link to="/login" className="nav-item" >Login</Link></li>
                 </ul>
             </section>
             <section className="footer_contact">
                 <h4>Contact</h4>
-                <p>Bruder str. 43<br/>59494 Chicago<br/>USA</p>
-                <p>+49123456789</p>
-                <p>info@littlelemon</p>
+                <p aria-label="address">Bruder str. 43<br/>59494 Chicago<br/>USA</p>
+                <p aria-label="phone number">+49123456789</p>
+                <p aria-label="email address">info@littlelemon</p>
             </section>
             <section>
                 <h4>Social Media Links</h4>

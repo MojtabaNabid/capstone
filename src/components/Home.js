@@ -19,21 +19,21 @@ import {Link} from 'react-router-dom'
 function Home() {
     return (
         <main className="main-home">
-            <section className="home-banner">
+            <section className="home-banner" aria-label="Homepage banner">
                 <section className="homebanner-text">
                     <h1>Little Lemon</h1>
                     <p>Little Lemon</p>
                     <p className="homebanner-desc">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.</p>
-                    <button className="yello-btn"><Link to="/reservation">Reserve a Table</Link></button>
+                    <button className="yello-btn" aria-label="reserve a table link button"><Link to="/reservation">Reserve a Table</Link></button>
                 </section>
                 <section>
-                    <img src={homebanner} className="homebanner-img" alt="one of our food items" />
+                    <img src={homebanner} className="homebanner-img" alt="Image of one of our food items" />
                 </section>
             </section>
-            <section className="weekspecial">
+            <section className="weekspecial" aria-label="our special items for the week">
                 <header className="weekspecial-title">
                     <h2>This week's special!</h2>
-                    <button className="yello-btn">Online Menu</button>
+                    <button className="yello-btn" aria-label="Menu">Online Menu</button>
                 </header>
                 <article className="cards">
                     <section className="card1">
@@ -80,7 +80,7 @@ function Home() {
                     </section>
                 </article>
             </section>
-            <section className="testimonials">
+            <section className="testimonials" aria-label="customer's review">
                 <h2>Testimonials</h2>
                 <section className="testimonials-items">
                     <section className="item">

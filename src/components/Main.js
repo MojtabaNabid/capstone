@@ -8,18 +8,16 @@ import { Routes, Route } from 'react-router-dom'
 import { useReducer } from "react"
 import {fetchAPI,submitAPI} from "../mockAPI.js"
 import { useNavigate } from "react-router-dom";
+import { useState } from "react"
 
 // Tomorrow tasks :
-// update sign up form and store user data in a useStat hook
-// update confirmation component and show the final details after submitting the reservation form by user
-
+//update the unit tests
 
 export function updateTimes(state, action) {
   switch (action.type) {
     case 'day':
-      const newDay = fetchAPI(action.daySelected)
-      return { ...state, date: action.daySelected, hour: newDay}
-
+      const newhour = fetchAPI(action.daySelected)
+      return { ...state, date: action.daySelected, hour: newhour}
     case 'hour':
       return { ...state, time: action.hourSelected }
     case 'guestnumber':
@@ -37,10 +35,10 @@ export function updateTimes(state, action) {
         const newTimeAvailable = fetchAPI(state.date)
         return {...state,
                 hour: newTimeAvailable,
-                numberOfGeusts: 0,
-                whereToSeat: "",
-                typeOfCeremony: "",
-                customerdescription: ""
+                // numberOfGeusts: 0,
+                // whereToSeat: "",
+                // typeOfCeremony: "",
+                // customerdescription: ""
               }
       }
         // state.day = availableTimesByDate
@@ -56,16 +54,16 @@ export function initializeTimes() {
   // console.log(returnedDate)
   return ({
     day: ["Choose Day",
-           "Mon, 25/03/24", 
-           "Tue, 26/03/24", 
-           "Wed, 27/03/24", 
-           "Thr, 28/03/24", 
-           "Fri, 29/03/24",
-           "Sat, 30/03/24", 
-           "Son, 31/03/24", 
-           "Mon, 01/04/24", 
-           "Teu, 02/04/24", 
-           "Wed, 03/04/24"
+           "Mon, 08/04/24", 
+           "Tue, 09/04/24", 
+           "Wed, 10/04/24", 
+           "Thr, 11/04/24", 
+           "Fri, 12/04/24",
+           "Sat, 13/04/24", 
+           "Son, 14/04/24", 
+           "Mon, 15/04/24", 
+           "Teu, 16/04/24", 
+           "Wed, 17/04/24"
           ],
     hour: returnedDate,
     date: "",
@@ -77,23 +75,52 @@ export function initializeTimes() {
   })
 }
 
-function Main() {
+function Main(props) {
   const [state, dispatch] = useReducer(updateTimes, initializeTimes())
   const navigate = useNavigate();
 
+  const [formData, setformData] = useState({
+    nameAndFamily: "",
+    phone: "",
+    email: "",
+    pass: "",
+    passConf: "",
+    address: "",
+    signedFlag: 0,
+})
+
   const submitForm = (state) => {
-    if (submitAPI(state)) {
+    if (submitAPI(state) && formData.signedFlag === 1) {
       navigate("/ConfirmedBooking");
     }
+    else {
+      alert("You didn't sign up!!")
+    }
   }
+
+  let disable = false
+  const handleDisable = (formData) => {
+    if (formData.nameAndFamily.length > 0 && formData.email.length > 0 && formData.pass.length > 0){
+      disable = true
+      // console.log(d)
+      return true
+    }
+    else return false
+  }
+
+  handleDisable(formData)
+  
+  
+
+
 
   return (
     <div className="main">
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/reservation" element={<Reservations state={state} dispatch={dispatch} submitForm={submitForm} />} />
-        <Route path="/login" element={<Signup />} />
-        <Route path="/ConfirmedBooking" element={<ConfirmedBooking state={state} />} />
+        <Route path="/login" element={<Signup  formData={formData} setformData={setformData} disable={disable} setNameAndFamily={props.setNameAndFamily} />} />
+        <Route path="/ConfirmedBooking" element={<ConfirmedBooking state={state} dispatch={dispatch} formData={formData} />} />
         <Route path="/menu" element={<Menu />} />
         <Route path="/aboutme" element={<Aboutme />} />
       </Routes>

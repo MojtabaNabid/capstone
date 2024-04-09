@@ -1,7 +1,7 @@
 import {Link} from 'react-router-dom'
 
 
-function Nav() {
+function Nav(props) {
     return (
         <>
             <nav className="nav desktop-size">
@@ -11,7 +11,7 @@ function Nav() {
                     <li><Link to="/Menu" className="nav-item" >Menu</Link></li>
                     <li><Link to="/reservation" className="nav-item">Reservations</Link></li>
                     <li><Link to="/order-online" className="nav-item" >Order Online</Link></li>
-                    <li><Link to="/login" className="nav-item" >Login</Link></li>
+                    <li><Link to="/login" className="nav-item" >{ props.nameAndFamily ? props.nameAndFamily : "Login" }</Link></li>
                 </ul>
             </nav>
             {/* <nav className="nav mobile-size">

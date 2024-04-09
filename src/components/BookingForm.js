@@ -43,12 +43,14 @@ function BookingForm(props) {
         e.preventDefault();
         console.log("form submitted!");
         console.log(props.state)
-        
-        props.submitForm(props.state)
-        
-        props.dispatch({
-            type: "reservationSlot"
-        })
+        const answer = window.confirm("Your Reservation will be booked by clicking on the \"Ok\" button, Are you sure about your selection?");
+        if (answer){
+            props.submitForm(props.state)
+            
+            props.dispatch({
+                type: "reservationSlot"
+            })
+        }
 
     }
             
@@ -60,9 +62,10 @@ function BookingForm(props) {
                     <form onSubmit={handleSubmit}>
                         <section className="detail">
                             <div className="guest">
-                                <label htmlFor="guestnumber">Number of Guests: </label>
+                                <label htmlFor="guestnumber">Number of Guests* </label>
                                 <select name="guests" 
                                     id="guestnumber" 
+                                    
                                     value={props.state.numberOfGeusts} 
                                     // onChange={e => setbookingForm({...bookingForm, numberOfGeusts: e.target.value})}>
                                     onChange={e => {
@@ -70,8 +73,9 @@ function BookingForm(props) {
                                         type: "guestnumber",
                                         numberOfGeusts: e.target.value
                                         })
-                                    }}>
-                                    <option value="select">Select a number</option>
+                                    }}
+                                    required >
+                                    <option value="">Select a number</option>
                                     <option value="1">1 person</option>
                                     <option value="2">2 people</option>
                                     <option value="3">3 people</option>
@@ -82,15 +86,14 @@ function BookingForm(props) {
                             </div>
 
                             <div className="time">
-                                <label htmlFor="time_available">Time available:</label>
+                                <label htmlFor="time_available">Time available*</label>
                                 <div>
-                                    <p className="bookTimeStatus"> {props.state.date} - {props.state.time} </p>
                                     <select 
                                         name="time_available" 
                                         id="time_available" 
                                         value={props.state.date}
                                         onChange={handleDay}
-                                        >
+                                        required >
 
                                         {props.state.day.map((item, index) => {
                                             return <option key={index} value={item}>{item}</option>
@@ -102,18 +105,19 @@ function BookingForm(props) {
                                         id="hour_available" 
                                         value={props.state.time}
                                         onChange={handleHour}
-                                        >
+                                        required >
                                         {hourFetched.map((item, index) => {
                                             return <option key={index} value={item}>{item}</option>
                                         })}
                                     </select>
+                                    <p className="bookTimeStatus"> {props.state.date} - {props.state.time} </p>
 
                                 </div>
                             </div>
 
                             {/* choosing where to seat */}
                             <div className="whereToSeat">
-                                <label htmlFor="seat">Where to Seat: </label>
+                                <label htmlFor="seat">Where to Seat </label>
                                 <select name="seat" 
                                     id="seat"
                                     value={props.state.whereToSeat}
@@ -232,7 +236,7 @@ function BookingForm(props) {
 
                                     checked={props.state.typeOfCeremony === "Event"}
                                 />
-                                <label htmlFor="event">Evnet</label>
+                                <label htmlFor="event">Event</label>
                             </div>
 
                             <div>

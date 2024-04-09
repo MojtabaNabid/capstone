@@ -14,7 +14,7 @@ function Reservations(props) {
                     <h1>Reserve a Table</h1>
                     <p>at little lemon Chicago</p>
                     <p>Make sure you create an account and enter all your information accurately before completing your reservation</p>
-                    <button className="yello-btn"><Link to="/login">Create an account</Link></button>
+                    <button className="yello-btn" aria-label='create an account'><Link to="/login">Create an account</Link></button>
                 </section>
                 <img src={reserve_table_banner} alt="a dish with one fish" />
                 
