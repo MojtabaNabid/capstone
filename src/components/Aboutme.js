@@ -1,5 +1,4 @@
-import restaurant from "../assets/images/restaurant.jpg"
-import restaurant_chef from "../assets/images/restaurantchef.jpg"
+
 import colleages from "../assets/images/little-lemon-employees.jpg"
 
 
@@ -9,7 +8,9 @@ function Aboutme() {
         <article>
             
             <section className="description-aboutus">
-                <div className="employees" ><img src={colleages}  alt="a picture of the little lemon employees in the kitchen" /></div>
+                <div className="employees" >
+                    <img src={colleages}  alt="employees" />
+                </div>
                 <h2>About Us</h2>
                 <p>Welcome to Little Lemon – where the zest of life meets the art of cooking. Nestled in the heart of the community, Little Lemon is more than just a restaurant; it's a haven for those who cherish the joy of dining and the magic of culinary innovation.
                 <br />Our journey began with a simple yet passionate dream: to create a dining experience that feels like home yet dazzles with flavors from around the world. Little Lemon is the embodiment of that dream, serving dishes that comfort, inspire, and satisfy with every bite.

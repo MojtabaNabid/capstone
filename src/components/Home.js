@@ -27,7 +27,7 @@ function Home() {
                     <button className="yello-btn" aria-label="reserve a table link button"><Link to="/reservation">Reserve a Table</Link></button>
                 </section>
                 <section>
-                    <img src={homebanner} className="homebanner-img" alt="Image of one of our food items" />
+                    <img src={homebanner} className="homebanner-img" alt="one of our food items" />
                 </section>
             </section>
             <section className="weekspecial" aria-label="our special items for the week">
@@ -124,7 +124,7 @@ function Home() {
                 </section>
                 <section>
                     <img src={restaurant} className="about-img" alt="restaurant view"/>
-                    <img src={restaurant_chef} className="about-img" alt="picture of restaurant chef"/>
+                    <img src={restaurant_chef} className="about-img" alt="restaurant chef"/>
                 </section>
             </section>
         </main>
