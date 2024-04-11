@@ -41,17 +41,18 @@ function BookingForm(props) {
     
     const handleSubmit = (e) => {
         e.preventDefault();
-        console.log("form submitted!");
-        console.log(props.state)
-        const answer = window.confirm("Your Reservation will be booked by clicking on the \"Ok\" button, Are you sure about your selection?");
-        if (answer){
+        if(props.formData.signedFlag === 1){
+            if(window.confirm("By clicling on OK button, Your Booking will be done, Are You sure?")){
+                props.dispatch({
+                    type: "reservationSlot"
+                })
+            }
             props.submitForm(props.state)
+            // console.log("form submitted!");
+            // console.log(props.state)
             
-            props.dispatch({
-                type: "reservationSlot"
-            })
-        }
-
+        } 
+        else alert("You didn't sign up!!")
     }
             
     return (

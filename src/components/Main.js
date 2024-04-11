@@ -93,16 +93,12 @@ function Main(props) {
     if (submitAPI(state) && formData.signedFlag === 1) {
       navigate("/ConfirmedBooking");
     }
-    else {
-      alert("You didn't sign up!!")
-    }
   }
-
+    
   let disable = false
   const handleDisable = (formData) => {
     if (formData.nameAndFamily.length > 0 && formData.email.length > 0 && formData.pass.length > 0){
       disable = true
-      // console.log(d)
       return true
     }
     else return false
@@ -112,13 +108,11 @@ function Main(props) {
   
   
 
-
-
   return (
     <div className="main">
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/reservation" element={<Reservations state={state} dispatch={dispatch} submitForm={submitForm} />} />
+        <Route path="/reservation" element={<Reservations state={state} dispatch={dispatch} submitForm={submitForm} formData={formData} />} />
         <Route path="/login" element={<Signup  formData={formData} setformData={setformData} disable={disable} setNameAndFamily={props.setNameAndFamily} />} />
         <Route path="/ConfirmedBooking" element={<ConfirmedBooking state={state} dispatch={dispatch} formData={formData} />} />
         <Route path="/menu" element={<Menu />} />
@@ -127,5 +121,6 @@ function Main(props) {
     </div>
   )
 }
+
 
 export default Main

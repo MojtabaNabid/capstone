@@ -1,8 +1,7 @@
 import checkIcon from "../assets/images/check_icon.png"
-import { useState } from "react"
 
 function ConfirmedBooking(props) {
-    const [reservationDetail, setReservationDetail] = useState({
+    const reservationDetail = {
         name: props.formData.nameAndFamily,
         email: props.formData.email,
         address: props.formData.address,
@@ -12,15 +11,8 @@ function ConfirmedBooking(props) {
         whereToSeat: props.state.whereToSeat,
         typeOfCeremony: props.state.typeOfCeremony,
         customerdescription: props.state.customerdescription,
-    })
+    }
 
-
-
-
-    
-    // const customerEmail = "";
-    // const username = "";
-    console.log(props.state)
     return (
         <main className="reserv_conf">
             <div>

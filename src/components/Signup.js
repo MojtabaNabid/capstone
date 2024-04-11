@@ -64,6 +64,7 @@ function Signup(props) {
                     <input id="password" 
                         type="password" 
                         name="password"
+                        placeholder="Your Password"
                         pattern="^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$"
                         value={props.formData.pass}
                         onChange={e => props.setformData({...props.formData, pass: e.target.value})} required /><br />
@@ -84,7 +85,8 @@ function Signup(props) {
                         row="3" 
                         name="address"
                         value={props.formData.address}
-                        onChange={e => props.setformData({...props.formData, address: e.target.value})}>Type here...</textarea>
+                        placeholder="Type here..."
+                        onChange={e => props.setformData({...props.formData, address: e.target.value})}></textarea>
 
                     <div className="submit">
                         <input type="submit" value="submit" disabled={!props.disable} aria-label="submit"/>
