@@ -88,16 +88,6 @@ Screenshots can be added here after running the application locally. For example
 
 Create a `screenshots` folder and add the image before enabling that Markdown line.
 
-## Future Improvements
-
-Potential enhancements include:
-
-- Persisting reservations through an API and database.
-- Adding backend-supported authentication and account management.
-- Expanding automated tests and improving accessibility.
-- Deploying a live demonstration of the website.
-
-## Repository
 
 [View source code on GitHub](https://github.com/MojtabaNabid/capstone)
 
