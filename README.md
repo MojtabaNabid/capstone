@@ -26,6 +26,13 @@ This project demonstrates practical frontend development with React, including r
 - Create React App (`react-scripts`)
 - React Testing Library and Jest DOM (included in project dependencies)
 
+## 📸 Screenshots
+
+![Capstone HomePage](./public/screenshots/HomePage.png)
+![Capstone Reservationn Page](./public/screenshots/reservation_page.png)
+![Capstone Login Page](./public/screenshots/login_page.png)
+![Capstone Confirmation Page](./public/screenshots/ConfirmedBooking_page.png)
+
 ## Getting Started
 
 ### Prerequisites
