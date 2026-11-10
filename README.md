@@ -29,15 +29,19 @@ This project demonstrates practical frontend development with React, including r
 ## 📸 Screenshots
 
 - Home Page
+
 ![Capstone HomePage](./public/screenshots/HomePage.png)
 
 - Reservation Page
+
 ![Capstone Reservationn Page](./public/screenshots/reservation_page.png)
 
 - Login Page
+
 ![Capstone Login Page](./public/screenshots/login_page.png)
 
 - Confirmation Page
+
 ![Capstone Confirmation Page](./public/screenshots/ConfirmedBooking_page.png)
 
 ## Getting Started
